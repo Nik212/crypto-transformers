@@ -34,7 +34,7 @@ class SeqNet(pl.LightningModule):
         
         self.criterion = nn.MSELoss()
         
-        self.mae = torch.nn.L1Loss()
+        self.mae = nn.L1Loss()
         self.train_mse = MeanSquaredError()
         self.val_mse = MeanSquaredError()
 
@@ -48,34 +48,34 @@ class SeqNet(pl.LightningModule):
     
     def configure_optimizers(self):
         optimizer = AdamW(self.parameters(), lr=1e-3)
-        scheduler = CosineAnnealingLR(optimizer, T_max=self.n_epochs // 5, eta_min=1e-5)
+        scheduler = CosineAnnealingLR(optimizer, T_max=self.n_epochs // 3, eta_min=1e-5)
         return [optimizer], [scheduler]
     
     def training_step(self, train_batch, batch_idx):
         _, _, tgt_y = train_batch
 
-        prediction = self.forward(train_batch)
+        prediction = self.forward(train_batch).squeeze()
         
-        loss = self.criterion(tgt_y, prediction)
+        loss = self.criterion(tgt_y.squeeze(), prediction)
         
-        self.train_mse(tgt_y, prediction)
+        self.train_mse(tgt_y.squeeze(), prediction)
         self.log('train_MSE', self.train_mse, on_step=True, on_epoch=False)
         self.log('train_RMSE', torch.sqrt(loss))
-        self.log('train_MAE', self.mae(tgt_y, prediction))
+        self.log('train_MAE', self.mae(tgt_y.squeeze(), prediction))
         
         return loss
 
     def validation_step(self, val_batch, batch_idx):
         _, _, tgt_y = val_batch
 
-        prediction = self.forward(val_batch)
+        prediction = self.forward(val_batch).squeeze()
         
-        loss = self.criterion(tgt_y, prediction)
+        loss = self.criterion(tgt_y.squeeze(), prediction)
         
-        self.val_mse(tgt_y, prediction)
+        self.val_mse(tgt_y.squeeze(), prediction)
         self.log('val_MSE', self.val_mse, on_step=False, on_epoch=True)
         self.log('val_RMSE', torch.sqrt(loss))
-        self.log('val_MAE', self.mae(tgt_y, prediction))
+        self.log('val_MAE', self.mae(tgt_y.squeeze(), prediction))
         
         return loss
     

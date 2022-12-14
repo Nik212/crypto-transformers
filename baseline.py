@@ -1,3 +1,4 @@
+
 import torch.nn as nn 
 from torch import nn, Tensor
 import pos_encoder as pe
@@ -232,4 +233,4 @@ class TimeSeriesTransformer(nn.Module):
         decoder_output = self.linear_mapping(decoder_output) # shape [batch_size, target seq len]
         #print("From model.forward(): decoder_output size after linear_mapping = {}".format(decoder_output.size()))
 
-        return decoder_output.squeeze()
+        return decoder_output
