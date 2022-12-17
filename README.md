@@ -1,6 +1,8 @@
-# Efficient Transformers: study of existing methods in the case of crypto data
+# Efficient Transformers
 
-A course project aimed to review existing improvement over the classical Transformer architecture.  
+A course project aimed to review existing improvement over the classical Transformer architecture. We review and test the classical Transformer (baseline), Informer and Performer using high frequency crypto data. The choice of data is more or less arbitrary but mostly it was due to simplicity of the data.
+
+The goal of the project is to study and compare the GPU memory footprint and speed of inference. 
 
 The attention-based methods and transformers made a significant breakthrough in the deep learning area and greatly impacted NLP task solutions [3]. Although recent works show that they could potentially improve results in different tasks domains, the application of transformer for financial data in particular transactions data is underexplored.
 
