@@ -1,4 +1,6 @@
-# crypto-transformers
+# Efficient Transformers: study of existing methods in the case of crypto data
+
+A course project aimed to review existing improvement over the classical Transformer architecture.  
 
 The attention-based methods and transformers made a significant breakthrough in the deep learning area and greatly impacted NLP task solutions [3]. Although recent works show that they could potentially improve results in different tasks domains, the application of transformer for financial data in particular transactions data is underexplored.
 
