@@ -14,8 +14,8 @@ While applying attention mechanisms, one can face the apparent restriction on in
 This repo is an attempt to experiment with these models on financial data. The main objectives are listed below:
 
 1) implementation for baseline model
-2) implementation for performer model
-3) implementation for Informer model
+2) implementation for Informer model
+3) ~~implementation for Performer model~~ Due to some software development challenges, this model is not included in the final report 
 4) benchmarking all models in terms of speed and memory consumption
 
 
