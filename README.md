@@ -1,4 +1,6 @@
-# Efficient Transformers
+# Efficient Transformers, Skoltech Models of Sequential Data Course 2022
+
+[Vladimir Chernyy](https://github.com/scalyvladimir), [Nikira Glukhov](https://github.com/Nik212), [Prateek Rajput](https://github.com/pkrajput)
 
 ## Project description
 A course project aimed to review existing improvements over the classical Transformer architecture. We review and test the classical Transformer (baseline) and Informer using a time series of high frequency crypto data. The choice of data is more or less arbitrary but mostly it was due to simplicity of the data.
