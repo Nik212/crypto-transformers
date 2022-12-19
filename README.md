@@ -2,7 +2,7 @@
 
 ## About The Project
 ### TLDR
-A course project aimed to review existing improvements over the classical Transformer architecture. We review and test the classical Transformer (baseline), Informer and Performer using a time series of high frequency crypto data. The choice of data is more or less arbitrary but mostly it was due to simplicity of the data.
+A course project aimed to review existing improvements over the classical Transformer architecture. We review and test the classical Transformer (baseline) and Informer using a time series of high frequency crypto data. The choice of data is more or less arbitrary but mostly it was due to simplicity of the data.
 
 The goal of the project is to study and compare the GPU memory footprint and speed of inference.
 
