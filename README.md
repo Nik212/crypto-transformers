@@ -8,7 +8,7 @@ A course project aimed to review existing improvements over the classical Transf
 The goal of the project is to study and compare the GPU memory footprint and speed of inference.
 
 ### Background
-The attention-based methods and transformers made a significant breakthrough in the deep learning area and greatly impacted NLP task solutions [3]. Although recent works show that they could potentially improve results in different tasks domains, the application of transformer for financial data in particular transactions data is underexplored.
+The attention-based methods and transformers made a significant breakthrough in the deep learning area and greatly impacted NLP task solutions [[4]](https://arxiv.org/abs/1706.03762). Although recent works show that they could potentially improve results in different tasks domains, the application of transformer for financial data in particular transactions data is underexplored.
 
 While applying attention mechanisms, one can face the apparent restriction on input sequence length due to the method's quadratic complexity. Recent papers proposed different ways to overcome this problem, but we want to concentrate on two promising approaches: Informer and Performer [[2]](https://arxiv.org/abs/2109.00301), [[3]](https://arxiv.org/abs/2009.14794).
 
