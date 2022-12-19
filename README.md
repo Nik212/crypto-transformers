@@ -33,6 +33,6 @@ To get a local copy up and running follow these simple example steps.
    git clone 
    ```
 2. Navigate to a folder ```baseline_experiments``` or ```informer_experiments``` depending on the model for which you would like to have an inference
-3. Download the checkpoints for different encoder seqeuence lengths from google drive https://drive.google.com/drive/folders/1_13U4DmnYnTqc8FfvA7AL5pO5V5HDcTn. Make sure that the path ```/*_experiments/checkpoints_*/``` exists. 
+3. Download the checkpoints for different encoder seqeuence lengths from google drive https://drive.google.com/drive/folders/1_13U4DmnYnTqc8FfvA7AL5pO5V5HDcTn. Place the folder in the corresponding folder. (!) Make sure that the path ```/*_experiments/checkpoints_*/``` exists (!). 
 4. Inference speed and memory footprint. Run ```main_*.ipynb``` in the folder and follow the initial instructions given in the notebooks. The inference part is done automatically: all the metrics should be printed out.
 
